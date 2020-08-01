@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TikiHomeTest</string>
+    <string name="str_home">Trang chủ</string>
+    <string name="str_items">Danh mục</string>
+    <string name="str_search">Tìm kiếm</string>
+    <string name="str_noti">Thông báo</string>
+    <string name="str_profile">Cá nhân</string>
+</resources>
