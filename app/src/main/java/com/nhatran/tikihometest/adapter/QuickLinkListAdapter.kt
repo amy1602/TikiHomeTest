@@ -1,5 +1,6 @@
 package com.nhatran.tikihometest.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,7 +28,8 @@ class QuickLinkListAdapter : RecyclerView.Adapter<QuickLinkListAdapter.ItemViewH
         holder.bindData(itemList[position])
     }
 
-    fun setData(list: ArrayList<QuickLinkItem>) {
+    fun setData(list: List<QuickLinkItem>) {
+        Log.d("asasasda", "setData: " + list)
         itemList.clear()
         itemList.addAll(list)
         notifyDataSetChanged()

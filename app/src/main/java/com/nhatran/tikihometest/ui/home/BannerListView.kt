@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SnapHelper
 import com.nhatran.tikihometest.adapter.BannerListAdapter
 import com.nhatran.tikihometest.domain.BannerData
-import com.nhatran.tikihometest.domain.BannerItem
 import com.nhatran.tikihometest.service.BannerApi
 import retrofit2.Call
 import retrofit2.Callback
@@ -40,7 +39,7 @@ class BannerListView(context: Context) : FrameLayout(context) {
     }
 
     fun loadData() {
-        BannerApi.retrofitService.getBannerListAsync().enqueue(object : Callback<BannerData> {
+        BannerApi.retrofitService.getBannerData().enqueue(object : Callback<BannerData> {
             override fun onFailure(call: Call<BannerData>, t: Throwable) {
             }
 
@@ -50,7 +49,6 @@ class BannerListView(context: Context) : FrameLayout(context) {
             ) {
                 response.body()?.let { adapter.setData(it.data) }
             }
-
         })
     }
 }

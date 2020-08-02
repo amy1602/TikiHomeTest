@@ -2,7 +2,7 @@ package com.nhatran.tikihometest.domain
 
 import com.squareup.moshi.Json
 
-data class BannerData (
+data class QuickLinkData(
     @field:Json(name = "data")
-    var data: List<BannerItem>
+    var data: List<List<QuickLinkItem>>
 )

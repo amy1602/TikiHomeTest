@@ -1,10 +1,10 @@
 package com.nhatran.tikihometest.domain
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 data class BannerItem(
-    @SerializedName("mobile_url")
-    var thumbUrl: String,
-    @SerializedName("title")
-    var title: String
+    @field:Json(name = "title")
+    var title: String,
+    @field:Json(name = "mobile_url")
+    var thumbUrl: String
 )
