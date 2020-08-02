@@ -5,4 +5,6 @@
     <string name="str_search">Tìm kiếm</string>
     <string name="str_noti">Thông báo</string>
     <string name="str_profile">Cá nhân</string>
+    <string name="str_sale_start">Vừa mở bán</string>
+    <string name="str_saled_number">Đã bán %d</string>
 </resources>

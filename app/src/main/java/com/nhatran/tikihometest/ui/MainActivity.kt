@@ -1,17 +1,13 @@
 package com.nhatran.tikihometest.ui
 
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.LayoutInflater
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 import com.nhatran.tikihometest.R
 import com.nhatran.tikihometest.adapter.MainTabAdapter
+import com.nhatran.tikihometest.ui.common.CustomViewPager
+import com.nhatran.tikihometest.ui.home.HomeFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val viewPager:ViewPager = findViewById(R.id.view_pager)
+        val viewPager:CustomViewPager = findViewById(R.id.view_pager)
         val adapter = MainTabAdapter(supportFragmentManager)
         tabLayout = findViewById(R.id.tab_container)
 
@@ -32,6 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         viewPager.adapter = adapter
         tabLayout?.setupWithViewPager(viewPager)
+        viewPager.setEnableSwipeToScroll(false)
 
         addTabView(0, R.drawable.ic_home, getString(R.string.str_home))
         addTabView(1, R.drawable.ic_dashboard, getString(R.string.str_items))

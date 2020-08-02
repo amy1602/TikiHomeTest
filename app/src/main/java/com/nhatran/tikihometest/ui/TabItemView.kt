@@ -4,11 +4,9 @@ import android.content.Context
 import android.graphics.Color
 import android.util.TypedValue
 import android.view.Gravity
-import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import com.nhatran.tikihometest.common.spToPx
 
 class TabItemView(context: Context, var icon: Int, var title: String) : LinearLayout(context) {
     private var titleTextView : TextView? = null
