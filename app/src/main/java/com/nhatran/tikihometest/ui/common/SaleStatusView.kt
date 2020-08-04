@@ -49,6 +49,7 @@ class SaleStatusView : View {
         } else {
             displayText = context.getString(R.string.str_saled_number, saleNumber)
         }
+        invalidate()
     }
 
     override fun onDraw(canvas: Canvas) {
@@ -85,7 +86,7 @@ class SaleStatusView : View {
         if (saleNumber == 0) {
             rect = RectF(0f,0f, height.toFloat(), height.toFloat())
         } else {
-            rect = RectF(0f,0f, width * saleNumber * 1f/ total, height.toFloat())
+            rect = RectF(0f,0f, Math.max(width * saleNumber * 1f/ total, height.toFloat()), height.toFloat())
         }
         path.addRoundRect(rect, corners, Path.Direction.CW)
         canvas.drawPath(path, salePaint)

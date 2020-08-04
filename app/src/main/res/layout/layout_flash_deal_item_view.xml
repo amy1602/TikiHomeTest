@@ -26,8 +26,7 @@
         android:background="@drawable/bg_discount"
         android:paddingLeft="4dp"
         android:paddingRight="4dp"
-        android:textSize="10sp"
-        android:text="-13%"/>
+        android:textSize="10sp"/>
 
     <TextView
         android:id="@+id/tv_price"
@@ -38,11 +37,11 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iv_thumb"
-        android:text="18.000vnd"
         android:layout_marginTop="16dp"
         />
 
     <com.nhatran.tikihometest.ui.common.SaleStatusView
+        android:id="@+id/status_view"
         android:layout_width="100dp"
         android:layout_height="20dp"
         app:layout_constraintTop_toBottomOf="@id/tv_price"

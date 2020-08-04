@@ -29,6 +29,9 @@ class HomeListContainerAdapter : RecyclerView.Adapter<HomeListContainerAdapter.I
             TYPE_ROW_FLASH_DEAL_LIST -> {
                 itemView = FlashDealListView(parent.context)
             }
+            TYPE_ROW_LOADING -> {
+                itemView = LayoutInflater.from(parent.context).inflate(R.layout.layout_loading_item_view, parent, false)
+            }
             else -> {
                 itemView = View(parent.context)
             }
@@ -54,6 +57,7 @@ class HomeListContainerAdapter : RecyclerView.Adapter<HomeListContainerAdapter.I
             HomeItem.TYPE_QUICK_LINK_LIST -> return TYPE_ROW_QUICK_LINK_LIST
             HomeItem.TYPE_FLASH_DEAL_HEADER -> return TYPE_ROW_FLASH_DEAL_HEADER
             HomeItem.TYPE_FLASH_DEAL_LIST -> return TYPE_ROW_FLASH_DEAL_LIST
+            HomeItem.TYPE_LOADING -> return TYPE_ROW_LOADING
         }
         return TYPE_ROW_UNKNOWN
     }
